@@ -158,12 +158,3 @@ This project shows how **machine learning models can be transformed into interpr
 * Rule-based systems (PRISM)
 * Tree-based models (CART)
 * Standardized decision format (DMN)
-
----
-
-
-## Author
-
-Iordana Kouimtzidou
-
-
