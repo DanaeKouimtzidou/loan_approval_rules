@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="def_d4fb2196-afaf-46a3-bad6-c23084d271af" name="PRISM Loan Approval" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="dec_911bebf9-f94c-4b26-9e56-fc4c4bf99424" name="PRISM Loan Approval">
+    <decisionTable id="dt_fc59265c-546f-4f3b-8301-a9b8a830da29" hitPolicy="FIRST">
+      <input>
+        <inputExpression typeRef="string">
+          <text>Age</text>
+        </inputExpression>
+      </input>
+      <input>
+        <inputExpression typeRef="string">
+          <text>Income</text>
+        </inputExpression>
+      </input>
+      <output name="Loan_Approval" typeRef="string"/>
+      <rule>
+        <inputEntry>
+          <text>&quot;old&quot;</text>
+        </inputEntry>
+        <inputEntry>
+          <text>-</text>
+        </inputEntry>
+        <outputEntry>
+          <text>Reject</text>
+        </outputEntry>
+      </rule>
+      <rule>
+        <inputEntry>
+          <text>&quot;underage&quot;</text>
+        </inputEntry>
+        <inputEntry>
+          <text>-</text>
+        </inputEntry>
+        <outputEntry>
+          <text>Reject</text>
+        </outputEntry>
+      </rule>
+      <rule>
+        <inputEntry>
+          <text>-</text>
+        </inputEntry>
+        <inputEntry>
+          <text>&quot;low&quot;</text>
+        </inputEntry>
+        <outputEntry>
+          <text>Reject</text>
+        </outputEntry>
+      </rule>
+      <rule>
+        <inputEntry>
+          <text>&quot;middle&quot;</text>
+        </inputEntry>
+        <inputEntry>
+          <text>&quot;mid&quot;</text>
+        </inputEntry>
+        <outputEntry>
+          <text>Approve</text>
+        </outputEntry>
+      </rule>
+      <rule>
+        <inputEntry>
+          <text>&quot;middle&quot;</text>
+        </inputEntry>
+        <inputEntry>
+          <text>&quot;high&quot;</text>
+        </inputEntry>
+        <outputEntry>
+          <text>Approve</text>
+        </outputEntry>
+      </rule>
+      <rule>
+        <inputEntry>
+          <text>-</text>
+        </inputEntry>
+        <inputEntry>
+          <text>-</text>
+        </inputEntry>
+        <outputEntry>
+          <text>Reject</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
