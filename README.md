@@ -36,25 +36,23 @@ README.md
 
 ## 1. Dataset Generation
 
-The dataset is created using **random synthetic data**.
+## 2. Data Transformation
 
-### Features:
+The numerical dataset was manually transformed into categorical variables using Excel.
 
-* **Age**: 0–99
-* **Income**: 0–100,000
-* **Loan_Approval**: Approve / Reject
+### Age Categories:
+- underage (<18)  
+- middle (18–65)  
+- old (>65)  
 
-### Rules:
-
-* Reject → Age < 18 or Age > 65
-* Approve → 18 ≤ Age ≤ 65 AND Income between > 33000
-* Reject → otherwise
+### Income Categories:
+- low (≤33,000)  
+- mid (33,001–65,000)  
+- high (65,001–100,000)  
 
 ### Output:
+- dataset_categorical.csv
 
-* `dataset_loan.csv`
-
----
 
 ## 2. Data Transformation
 
